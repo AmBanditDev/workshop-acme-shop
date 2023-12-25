@@ -1,3 +1,9 @@
+<?php
+
+require_once("config/connect.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -76,7 +82,7 @@
                   <a class="nav-link" href="./pages/login.html">Login</a>
                 </li>
                 <li class="nav-item ms-4">
-                  <a class="nav-link" href="./pages/register.html">Register</a>
+                  <a class="nav-link" href="./pages/register.php">Register</a>
                 </li>
               </ul>
             </div>

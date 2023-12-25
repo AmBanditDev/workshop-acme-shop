@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+require_once("../config/connect.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +18,25 @@
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
 </head>
 
-<body>
+<body class="position-relative">
+
+    <?php if (isset($_SESSION['success'])) { ?>
+        <div class="alert alert-success position-absolute top-0 end-0 m-2 w-25" role="alert">
+            <?php 
+                echo $_SESSION['success'];
+                unset($_SESSION['success']);
+            ?>
+        </div>
+    <?php } ?>
+    <?php if (isset($_SESSION['error'])) { ?>
+        <div class="alert alert-danger position-absolute top-0 end-0 m-2 w-25" role="alert">
+            <?php 
+                echo $_SESSION['error'];
+                unset($_SESSION['error']);
+            ?>
+        </div>
+    <?php } ?>
+
     <main class="container mx-auto">
         <div class="d-flex justify-content-center align-items-center min-vh-100">
             <div class="card custom-card shadow-lg">
@@ -19,7 +44,7 @@
                     <h1 class="text-center py-2">Register</h1>
                 </div>
                 <div class="card-body">
-                    <form action="" method="post">
+                    <form action="../management/register_db.php" method="post">
                         <div class="mb-3">
                             <label for="firstname" class="form-label">Firstname</label>
                             <input type="text" name="firstname" class="form-control" placeholder="Enter your firstname.." />
@@ -40,7 +65,7 @@
                             <label for="cPassword" class="form-label">Confirm Password</label>
                             <input type="password" name="cPassword" class="form-control" placeholder="Enter your confirm password.." />
                         </div>
-                        <button class="btn btn-light w-100 py-2">Register</button>
+                        <button class="btn btn-light w-100 py-2" name="register">Register</button>
                         <div class="d-block text-center mt-2">
                             <small>Are you have an account? <a href="login.html" class="text-primary fw-semibold">Login</a></small>
                         </div>
