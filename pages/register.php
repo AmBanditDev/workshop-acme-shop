@@ -67,7 +67,7 @@ require_once("../config/connect.php");
                         </div>
                         <button class="btn btn-light w-100 py-2" name="register">Register</button>
                         <div class="d-block text-center mt-2">
-                            <small>Are you have an account? <a href="login.html" class="text-primary fw-semibold">Login</a></small>
+                            <small>Are you have an account? <a href="login.php" class="text-primary fw-semibold">Login</a></small>
                         </div>
                     </form>
                 </div>
