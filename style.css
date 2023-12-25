@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    
+}
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+a {
+    text-decoration: none !important;
+    color: black !important;
+}
+.bg-brightness {
+    filter: brightness(50%) !important;
+}
+
+.bg-footer {
+    background-color: #2a2a2a;
+}
+
+.border-dashed {
+    border-top: 1px dashed #ccc;
+    border-bottom: 1px dashed #ccc;
+}
+
+footer ul li a:hover {
+    transition: .3s;
+    color: #FFC107 !important;
+}
+
+/************* Register Page *************/
+.custom-card {
+   min-width: 450px !important;
+}
+
+.custom-card button {
+    background-color: #2a2a2a;
+    color: white;
+}
+
+.custom-card button:hover {
+    background-color: #5a5a5a;
+    color: white;
+}
